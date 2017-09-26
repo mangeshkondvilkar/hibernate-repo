@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.test.entity.DBUser" table="DBUSER">
+		<id name="userId" type="int">
+			<column name="USER_ID" length="10" unique="true" not-null="true" />
+			<generator class="assigned" />
+		</id>
+
+		<property name="userName" type="string">
+			<column name="USER_NAME" length="35" not-null="true" />
+		</property>
+
+		<property name="createdBy" type="string">
+			<column name="CREATED_BY" length="35" not-null="true" />
+		</property>
+
+		<property name="createdDate" type="date">
+			<column name="CREATED_DATE" length="8" not-null="true" />
+		</property>
+	</class>
+
+</hibernate-mapping>
